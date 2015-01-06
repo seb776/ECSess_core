@@ -1,11 +1,11 @@
-## ECS
+# ECS
 ===
 
 An ECS design in c++14.
 
 The goal is to provide a user friendly and optimized EntityComponentSystem.
 
-# What's in ?
+### What's in ?
 EntityManager
 SystemManager
 BindingSystems: By tag, group, Type, TypeRestriction, Entity to System
