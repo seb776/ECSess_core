@@ -36,10 +36,10 @@ Many presets will be present to make it a real framework.
 You'll be able to add your own Entities, Components, Systems and Managers.
 
 ## TODO:
--Fill the repo with the actual c++11 version of the ECS
--bindTagged
--bindGrouped
--advancedTypeSystem
--Entity::bind(ASystem *)
--complete view functions (tree view of type restriction...)
--Conception for dll/so mistake
+- Fill the repo with the actual c++11 version of the ECS
+- bindTagged
+- bindGrouped
+- advancedTypeSystem
+- Entity::bind(ASystem *)
+- complete view functions (tree view of type restriction...)
+- Conception for dll/so mistake
