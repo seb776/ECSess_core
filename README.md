@@ -40,6 +40,7 @@ Many presets will be present to make it a real framework.
 You'll be able to add your own Entities, Components, Systems and Managers.
 
 ## TODO:
+- Store Components on EntityManager contiguous
 - Fill the repo with the actual c++11 version of the ECS
 - bindTagged
 - bindGrouped
