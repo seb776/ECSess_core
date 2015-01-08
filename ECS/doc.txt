@@ -1,0 +1,24 @@
+AFinalNode
+
+World
+AManager
+	update
+AECSManager
+EntityManager
+SystemManager
+	createSystem
+	addSystem
+	removeSystem
+	muteSystem
+	unmuteSystem
+	registerSystem
+	unregisterSystem
+	update
+TagManager
+	update
+GroupManager
+	update
+
+ASystem
+Entity
+AComponent
