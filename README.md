@@ -40,11 +40,13 @@ Many presets will be present to make it a real framework.
 You'll be able to add your own Entities, Components, Systems and Managers.
 
 ## TODO:
-- Store Components on EntityManager contiguous
-- Fill the repo with the actual c++11 version of the ECS
+- Store Components on ComponentManager contiguous
 - bindTagged
 - bindGrouped
 - advancedTypeSystem
 - Entity::bind(ASystem *)
+- name Entities for better debug output (DEBUG_MODE)
+- choice between static and shared library
 - complete view functions (tree view of type restriction...)
 - Conception for dll/so mistake
+  - Register class on construction on executable side ?
