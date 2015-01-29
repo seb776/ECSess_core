@@ -7,6 +7,18 @@ cmake_minimum_required(VERSION 3.0)
 
 project(ECSess)
 
+## add tests:
+# 1: link with the static lib \ Both tests must run exactly the same code
+# 2: link with the shared lib / the goal is to avoid behavior incoherence between the 2 libs
+# 3: create mini games (snake, tetris ...)
+# 4: unit_tests
+# => getId
+# add/remove/mute/unmute:
+# => Components
+# => Systems
+# => Managers
+# => Entities
+
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ./bin/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ./bin/dyn)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./bin)

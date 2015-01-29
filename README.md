@@ -50,3 +50,5 @@ You'll be able to add your own Entities, Components, Systems and Managers.
 - complete view functions (tree view of type restriction...)
 - Conception for dll/so mistake
   - Register class on construction on executable side ?
+- Warning when Entities/Components array must reallocate
+- 
