@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.4
 
+import sys
 import re
 
 def generate_enum(type_list):
@@ -25,7 +26,6 @@ def get_derived_classes(files, baseClass):
         op_file = open(f, "r")
         content = op_file.read()
         content = content.replace('\n', '')
-        # print("class.*?" + baseClass + "[' '|'\t']*\{.*?\};")
         m = re.findall("class.*?\{.*?\};", content, re.DOTALL)
         for _class in m:
             strs = _class.split()
@@ -35,7 +35,10 @@ def get_derived_classes(files, baseClass):
         op_file.close()
     return classes
 
-##print(generate_enum(["CollideBox", "SpriteComp", "CoordComp"]))
-f = open("ECSTypes.hpp", "w")
-f.write(generate_enum(get_derived_classes(["test.cpp"], "titi")))
-f.close()
+
+def generate_user_components(files, outFile = "ECSTypes.hpp"):
+    f = open(outFile, "w")
+    f.write(generate_enum(get_derived_classes(files, "titi")))
+    f.close()
+
+generate_user_components(sys.argv)

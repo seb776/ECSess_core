@@ -4,7 +4,7 @@ BUILD_FOLDER="build"
 
 help()
 {
-    echo "toto"
+    echo "Welcome to ECSess's installation guide for unix systems."
 }
 
 build_release()
