@@ -18,8 +18,8 @@ build_release()
 
 build_debug()
 {
-    mkdir $BUILD_FOLDER
-    cd $BUILD_FOLDER
+    mkdir $(BUILD_FOLDER)
+    cd $(BUILD_FOLDER)
     cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_CXX_FLAGS=-DDEBUG_MODE ../
     make
     cd ..
