@@ -1,12 +1,22 @@
 Welcome to this help to build ECSess.
 Commands:
 
+-G "Generator"
+To choose the generator used by cmake
+
+Default Config is Debug
+
 [Config]
+Release or Debug (not case sensitive)
 
 all [Config]
+Generate the project then build it.
 
 re [Config]
+Regenerate the project then rebuild it.
 
-sol
+proj
+Generate the project.
 
-resol
+reproj
+Regenerate the project.
