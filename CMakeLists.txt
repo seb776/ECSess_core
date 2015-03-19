@@ -33,19 +33,20 @@ elseif(WIN32)
 endif()
 
 include_directories(
-    "./ECS/includes/"
-    "./Tools/includes/"
-    "./Tools/includes/Type"
-    "./Tools/includes/Containers"
+    "./Core/ECS/includes/"
+    "./Core/Tools/includes/"
+    "./Core/Tools/includes/Type"
+    "./Core/Tools/includes/Containers"
 )
 
 file(
     GLOB_RECURSE
     "${CMAKE_PROJECT_NAME}_srcs"
-    ECS/*.cpp
-    Tools/*.cpp
+    Core/*.cpp
 )
 
+
+## Common  sources for shared and static libraries
 add_library(
     core
     OBJECT
