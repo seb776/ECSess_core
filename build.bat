@@ -24,15 +24,19 @@ goto :wait_key
 cd %build_folder%
 cmake ..\
 cd ..
+goto :wait_key
 
 :re
 rmdir %build_folder%
 goto :all
 
 :reproj
+rmdir %build_folder%
+goto :wait_key
 
 
 :help
+
 type "build_help.txt"
 
 :wait_key
