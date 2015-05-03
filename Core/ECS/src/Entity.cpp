@@ -94,7 +94,7 @@ namespace ECS {
     for (unsigned int i = 0;
 	 i < components_.getSize();
 	 ++i) {
-      std::cout << "\t" << "TypeId(" << Tools::TypeId(i).getIdentifier() << ")len=>" << components_[i].size() << std::endl;
+      std::cout << "\t" << "TypeId(" << 42/*Tools::TypeId(i).getIdentifier()*/ << ")len=>" << components_[i].size() << std::endl;
       if (components_[i].size()) {
 	for (unsigned int j = 0;
 	     j < components_[i].size();

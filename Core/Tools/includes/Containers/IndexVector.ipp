@@ -28,7 +28,7 @@ namespace Tools {
     }
     else {
       _data.push_back(value);
-      i = _data.size() - 1;
+      i = static_cast<unsigned int>(_data.size()) - 1;
     }
     return i;
   }
@@ -59,7 +59,7 @@ namespace Tools {
   // return the allocated size
   template<typename T>
   unsigned int        IndexVector<T>::size() const {
-    return _data.size();
+    return static_cast<unsigned int>(_data.size());
   }
 
   // return the number of elements inside

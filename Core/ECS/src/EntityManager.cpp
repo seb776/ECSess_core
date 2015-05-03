@@ -47,7 +47,7 @@ namespace ECS {
     return true;
   }
   bool	EntityManager::muteEntity_(Entity *e, const Tools::Timer& begin, float time, bool& firstCall) {
-    unsigned int id;
+//    unsigned int id;
 
     if (firstCall) {
       firstCall = false;
