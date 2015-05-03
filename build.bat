@@ -9,7 +9,8 @@ set build_folder=".\build\"
 set build_config="debug"
 
 
-if %argc% == 0 goto %build_config%
+if %argc% == 0 goto :help
+
 goto :%1
 
 :all
@@ -21,6 +22,7 @@ cd ..
 goto :wait_key
 
 :proj
+mkdir %build_folder%
 cd %build_folder%
 cmake ..\
 cd ..
@@ -31,9 +33,8 @@ rmdir %build_folder%
 goto :all
 
 :reproj
-rmdir %build_folder%
-goto :wait_key
-
+rmdir /s /q %build_folder%
+goto :proj
 
 :help
 

@@ -1,9 +1,0 @@
-/*
-** Author: Sebastien Maire
-** Contribs: 
-*/
-
-#include "World.hpp"
-#include "Entity.hpp"
-#include "AComponent.hpp"
-#include "ECSexceptions.hpp"

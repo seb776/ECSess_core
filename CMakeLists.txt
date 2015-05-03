@@ -7,18 +7,6 @@ cmake_minimum_required(VERSION 3.0)
 
 project(ECSess)
 
-## add tests:
-# 1: link with the static lib \ Both tests must run exactly the same code
-# 2: link with the shared lib / the goal is to avoid behavior incoherence between the 2 libs
-# 3: create mini games (snake, tetris ...)
-# 4: unit_tests
-# => getId
-# add/remove/mute/unmute:
-# => Components
-# => Systems
-# => Managers
-# => Entities
-
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ./bin/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ./bin/dyn)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./bin)
@@ -39,18 +27,56 @@ include_directories(
     "./Core/Tools/includes/Containers"
 )
 
-file(
-    GLOB_RECURSE
+set(
     "${CMAKE_PROJECT_NAME}_srcs"
-    Core/*.cpp
+    "Core/ECS/src/AComponent.cpp"
+    "Core/ECS/src/AECSManager.cpp"
+    "Core/ECS/src/AFinalNode.cpp"
+    "Core/ECS/src/AManager.cpp"
+    "Core/ECS/src/ASystem.cpp"
+    "Core/ECS/src/ECSEventManager.cpp"
+    "Core/ECS/src/Entity.cpp"
+    "Core/ECS/src/EntityManager.cpp"
+    "Core/ECS/src/GroupManager.cpp"
+    "Core/ECS/src/SyncIdManager.cpp"
+    "Core/ECS/src/SystemManager.cpp"
+    "Core/ECS/src/TagManager.cpp"
+    "Core/ECS/src/World.cpp"
 )
+
+set(
+    "${CMAKE_PROJECT_NAME}_includes"
+    "Core/ECS/includes/AComponent.hpp"
+    "Core/ECS/includes/AComponent.ipp"
+    "Core/ECS/includes/AECSManager.hpp"
+    "Core/ECS/includes/AFinalNode.hpp"
+    "Core/ECS/includes/AManager.hpp"
+    "Core/ECS/includes/ASystem.hpp"
+    "Core/ECS/includes/ASystem.ipp"
+    "Core/ECS/includes/ECSEventManager.hpp"
+    "Core/ECS/includes/ECSexceptions.hpp"
+    "Core/ECS/includes/Entity.hpp"
+    "Core/ECS/includes/Entity.ipp"
+    "Core/ECS/includes/EntityManager.hpp"
+    "Core/ECS/includes/GroupManager.hpp"
+    "Core/ECS/includes/SyncIdManager.hpp"
+    "Core/ECS/includes/SystemManager.hpp"
+    "Core/ECS/includes/SystemManager.ipp"
+    "Core/ECS/includes/TagManager.hpp"
+    "Core/ECS/includes/World.hpp"
+)
+
+
+source_group("Includes\\" FILES ${${CMAKE_PROJECT_NAME}_includes})
+source_group("Sources\\" FILES ${${CMAKE_PROJECT_NAME}_srcs})
 
 
 ## Common  sources for shared and static libraries
 add_library(
     core
     OBJECT
-    ${ECSess_srcs}
+    ${${CMAKE_PROJECT_NAME}_srcs}
+    ${${CMAKE_PROJECT_NAME}_includes}
 )
 
 add_library(
