@@ -3,9 +3,9 @@
 ## Contribs:
 ##
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 2.8)
 
-project(ECSess)
+project(ECSess_core)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ./bin/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ./bin/dyn)
@@ -80,13 +80,13 @@ add_library(
 )
 
 add_library(
-    "${CMAKE_PROJECT_NAME}"
+    "core_dynamic"
     SHARED
     $<TARGET_OBJECTS:core>
 )
 
 add_library(
-    "${CMAKE_PROJECT_NAME}_static"
+    "core_static"
     STATIC
     $<TARGET_OBJECTS:core>
 )
